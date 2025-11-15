@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bk20c4sgxqp34" path="res://Assets/Sprites/PlatformV1.png" id="2_1kcfi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d31q8"]
-size = Vector2(124, 41.272583)
+size = Vector2(203, 18)
 
 [sub_resource type="Animation" id="Animation_r66ge"]
 length = 0.001
@@ -59,14 +59,20 @@ position = Vector2(252, 970)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 position = Vector2(-40, -3.080017)
-scale = Vector2(1.64, 0.44)
 shape = SubResource("RectangleShape2D_d31q8")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="AnimatableBody2D/CollisionShape2D"]
-offset_left = -64.02439
-offset_top = -22.54541
-offset_right = 64.02441
-offset_bottom = 22.90918
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.5
+offset_top = -9.0
+offset_right = 101.5
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_1kcfi")
 patch_margin_left = 6
 patch_margin_top = 6
