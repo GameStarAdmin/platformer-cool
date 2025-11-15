@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bx8jht25bvaps"]
+[gd_scene load_steps=22 format=3 uid="uid://bx8jht25bvaps"]
 
 [ext_resource type="Texture2D" uid="uid://dkahlygyyfbmw" path="res://Assets/Sprites/icon.svg" id="1_a113d"]
 [ext_resource type="Script" uid="uid://cwyglcc1dn5n0" path="res://Scripts/character_body_2d.gd" id="1_vdr06"]
@@ -87,10 +87,74 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdr06"]
 size = Vector2(198.5, 20)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07780"]
+bg_color = Color(0.42534778, 0.40349057, 0.3940537, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d31q8"]
+bg_color = Color(0.63, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmpbk"]
+bg_color = Color(0.15116373, 0.39258227, 1.92523e-07, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r66ge"]
+bg_color = Color(0.20057532, 7.70092e-07, 0.93405205, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi5um"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+corner_detail = 12
+
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(81, 894)
+position = Vector2(75, 622)
 script = ExtResource("1_vdr06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -102,7 +166,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_otbr7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(93, 975)
+position = Vector2(93, 645)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(21.75, 41)
@@ -112,3 +176,41 @@ shape = SubResource("RectangleShape2D_vdr06")
 position = Vector2(-0.25, -1.9073486e-06)
 scale = Vector2(1.5546875, 0.15624997)
 texture = ExtResource("1_a113d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.021000002
+anchor_bottom = 0.037
+offset_top = 856.0
+offset_right = 1880.68
+offset_bottom = 1040.04
+theme_override_styles/panel = SubResource("StyleBoxFlat_07780")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_top = 904.0
+offset_right = 1920.0
+offset_bottom = 1032.0
+theme_override_constants/separation = 128
+alignment = 1
+
+[node name="First" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d31q8")
+
+[node name="Second" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dmpbk")
+
+[node name="Third" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r66ge")
+
+[node name="Fourth" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_oi5um")
