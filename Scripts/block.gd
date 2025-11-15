@@ -15,6 +15,7 @@ var start_point = 0
 func _ready():
 		pass
 func _process(_delta: float) -> void:
+	path.rotation =0
 	if Input.is_action_just_pressed("Button_1") && !animation.is_playing():
 		if path.progress_ratio == 1:
 			animation.play("move", -1, -speed, true)
