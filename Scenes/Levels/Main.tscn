@@ -1,9 +1,91 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx8jht25bvaps"]
+[gd_scene load_steps=18 format=3 uid="uid://bx8jht25bvaps"]
 
 [ext_resource type="Texture2D" uid="uid://dkahlygyyfbmw" path="res://Assets/Sprites/icon.svg" id="1_a113d"]
 [ext_resource type="Script" uid="uid://cwyglcc1dn5n0" path="res://Scripts/character_body_2d.gd" id="1_vdr06"]
+[ext_resource type="Texture2D" uid="uid://cqddil01g4vdg" path="res://Assets/Sprites/GameStarCube/CubeGameStar.png" id="2_07780"]
+[ext_resource type="Texture2D" uid="uid://bm7cpka5yaj7r" path="res://Assets/Sprites/GameStarCube/characterIdle.png" id="2_t355s"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vdr06"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t355s"]
+size = Vector2(43, 49)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_07780"]
+load_path = "res://.godot/imported/CubeGameStar.jpg-6a91dd06cfa4fcb255aceb326d126b8b.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otbr7"]
+atlas = ExtResource("2_07780")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d31q8"]
+atlas = ExtResource("2_t355s")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmpbk"]
+atlas = ExtResource("2_t355s")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r66ge"]
+atlas = ExtResource("2_t355s")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi5um"]
+atlas = ExtResource("2_t355s")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saai4"]
+atlas = ExtResource("2_t355s")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl3m6"]
+atlas = ExtResource("2_t355s")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ih0k"]
+atlas = ExtResource("2_t355s")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv52a"]
+atlas = ExtResource("2_t355s")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otbr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otbr7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d31q8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmpbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r66ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi5um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_saai4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl3m6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ih0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv52a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdr06"]
 size = Vector2(198.5, 20)
@@ -17,12 +99,17 @@ script = ExtResource("1_vdr06")
 zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_vdr06")
+position = Vector2(-0.5, 6.5)
+shape = SubResource("RectangleShape2D_t355s")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(0, -1.1920929e-07)
 scale = Vector2(0.145, 0.145)
-texture = ExtResource("1_a113d")
+texture = SubResource("CompressedTexture2D_07780")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_otbr7")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
