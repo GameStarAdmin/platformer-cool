@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -300.0
 
 func _process(_delta: float) -> void:
 	sprite_logic()
-	
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
