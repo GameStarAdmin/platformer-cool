@@ -3,7 +3,7 @@ extends Node2D
 @export var flow_dir: Vector2 = Vector2.RIGHT
 @export var is_iced: bool = true
 @export var angular_speed_deg: float = 90.0
-@export var water_color: Color = Color(0.0, 0.0, 1.0, 0.894)
+@export var water_color: Color = Color(0.029, 0.267, 1.0, 0.894)
 @export var ice_color: Color = Color(0.416, 0.6, 1.0, 0.871)
 
 var bodies_in_flow: Array[Node] = []
