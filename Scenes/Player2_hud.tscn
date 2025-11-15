@@ -1,4 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://du0o73op1m1gg"]
+[gd_scene load_steps=11 format=3 uid="uid://du0o73op1m1gg"]
+
+[ext_resource type="Texture2D" uid="uid://dg6vdrpaihgmd" path="res://Assets/Sprites/Buttons/RedButton.png" id="1_suhav"]
+[ext_resource type="Texture2D" uid="uid://c5qo2dju8rhx8" path="res://Assets/Sprites/Buttons/RedPressed.png" id="2_41kjq"]
+[ext_resource type="Texture2D" uid="uid://d0eqrl2qkhp1x" path="res://Assets/Sprites/Buttons/FocusedButton.png" id="3_suhav"]
+[ext_resource type="Texture2D" uid="uid://c8jog72jsswfi" path="res://Assets/Sprites/Buttons/GreenButton.png" id="4_rp3gv"]
+[ext_resource type="Texture2D" uid="uid://bsvp8v67auu7d" path="res://Assets/Sprites/Buttons/GreenPressed.png" id="5_62qa4"]
+[ext_resource type="Texture2D" uid="uid://de8nk17h8gn4s" path="res://Assets/Sprites/Buttons/BlueButton.png" id="6_uw330"]
+[ext_resource type="Texture2D" uid="uid://y65rllataomm" path="res://Assets/Sprites/Buttons/BluePressed.png" id="7_ttjjl"]
+[ext_resource type="Texture2D" uid="uid://bbe2s1cfrv17g" path="res://Assets/Sprites/Buttons/YellowButton.png" id="8_66lbc"]
+[ext_resource type="Texture2D" uid="uid://ceybg3j1mia27" path="res://Assets/Sprites/Buttons/YellowPressed.png" id="9_v4x8x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07780"]
 bg_color = Color(0.42534778, 0.40349057, 0.3940537, 1)
@@ -11,88 +21,6 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d31q8"]
-bg_color = Color(0.63, 0, 0, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.16, 0.16, 0.16, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_saai4"]
-bg_color = Color(0.44894928, 2.5088154e-06, 1.2513996e-06, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.16, 0.16, 0.16, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-corner_detail = 12
-shadow_size = 12
-shadow_offset = Vector2(-4, 6)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl3m6"]
-bg_color = Color(0.6313726, 0, 0, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.92535293, 0.9253528, 0.9253529, 1)
-border_blend = true
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-corner_detail = 12
-shadow_size = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmpbk"]
-bg_color = Color(0.15116373, 0.39258227, 1.92523e-07, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.16, 0.16, 0.16, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r66ge"]
-bg_color = Color(0.20057532, 7.70092e-07, 0.93405205, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.16, 0.16, 0.16, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi5um"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.16, 0.16, 0.16, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-corner_detail = 12
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -112,25 +40,30 @@ offset_bottom = 1032.0
 theme_override_constants/separation = 128
 alignment = 1
 
-[node name="First" type="Button" parent="HBoxContainer"]
+[node name="First" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_d31q8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_saai4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d31q8")
-theme_override_styles/focus = SubResource("StyleBoxFlat_nl3m6")
+texture_normal = ExtResource("1_suhav")
+texture_pressed = ExtResource("2_41kjq")
+texture_focused = ExtResource("3_suhav")
 
-[node name="Second" type="Button" parent="HBoxContainer"]
+[node name="Second" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_dmpbk")
+texture_normal = ExtResource("4_rp3gv")
+texture_pressed = ExtResource("5_62qa4")
+texture_focused = ExtResource("3_suhav")
 
-[node name="Third" type="Button" parent="HBoxContainer"]
+[node name="Third" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_r66ge")
+texture_normal = ExtResource("6_uw330")
+texture_pressed = ExtResource("7_ttjjl")
+texture_focused = ExtResource("3_suhav")
 
-[node name="Fourth" type="Button" parent="HBoxContainer"]
+[node name="Fourth" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_oi5um")
+texture_normal = ExtResource("8_66lbc")
+texture_pressed = ExtResource("9_v4x8x")
+texture_focused = ExtResource("3_suhav")
