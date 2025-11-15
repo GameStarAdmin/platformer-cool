@@ -1,12 +1,12 @@
-[gd_scene load_steps=32 format=3 uid="uid://bx8jht25bvaps"]
+[gd_scene load_steps=34 format=3 uid="uid://bx8jht25bvaps"]
 
 [ext_resource type="Texture2D" uid="uid://dkahlygyyfbmw" path="res://Assets/Sprites/icon.svg" id="1_a113d"]
 [ext_resource type="Script" uid="uid://cwyglcc1dn5n0" path="res://Scripts/character_body_2d.gd" id="1_vdr06"]
 [ext_resource type="Texture2D" uid="uid://cqddil01g4vdg" path="res://Assets/Sprites/GameStarCube/CubeGameStar.png" id="2_07780"]
 [ext_resource type="Texture2D" uid="uid://bm7cpka5yaj7r" path="res://Assets/Sprites/GameStarCube/characterIdle.png" id="2_t355s"]
 [ext_resource type="Texture2D" uid="uid://i7fpxbkcii7o" path="res://Assets/Sprites/GameStarCube/characterWalk.png" id="4_d31q8"]
-[ext_resource type="PackedScene" uid="uid://ctuwgusan4cjf" path="res://Scenes/Objects/level_end.tscn" id="5_d31q8"]
-[ext_resource type="PackedScene" uid="uid://du0o73op1m1gg" path="res://Scenes/Player2_hud.tscn" id="5_dmpbk"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/level_end.tscn" id="5_d31q8"]
+[ext_resource type="PackedScene" path="res://Scenes/Player2_hud.tscn" id="5_dmpbk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t355s"]
 size = Vector2(36, 49)
