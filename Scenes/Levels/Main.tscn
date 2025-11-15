@@ -1,11 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://bx8jht25bvaps"]
+[gd_scene load_steps=37 format=3 uid="uid://bx8jht25bvaps"]
 
 [ext_resource type="Texture2D" uid="uid://dkahlygyyfbmw" path="res://Assets/Sprites/icon.svg" id="1_a113d"]
 [ext_resource type="Texture2D" uid="uid://be6i6o134opfq" path="res://Assets/Sprites/Backgrounds/fall.png" id="1_oi5um"]
 [ext_resource type="Script" uid="uid://cwyglcc1dn5n0" path="res://Scripts/character_body_2d.gd" id="1_vdr06"]
 [ext_resource type="Texture2D" uid="uid://cqddil01g4vdg" path="res://Assets/Sprites/GameStarCube/CubeGameStar.png" id="2_07780"]
 [ext_resource type="Texture2D" uid="uid://bm7cpka5yaj7r" path="res://Assets/Sprites/GameStarCube/characterIdle.png" id="2_t355s"]
-[ext_resource type="PackedScene" uid="uid://ciqdesbnmum7p" path="res://Scenes/Levels/platform.tscn" id="5_d31q8"]
 [ext_resource type="Texture2D" uid="uid://i7fpxbkcii7o" path="res://Assets/Sprites/GameStarCube/characterWalk.png" id="4_d31q8"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/level_end.tscn" id="5_d31q8"]
 [ext_resource type="PackedScene" path="res://Scenes/Player2_hud.tscn" id="5_dmpbk"]
@@ -249,6 +248,7 @@ speed = 2.0
 position = Vector2(31, -140)
 curve = SubResource("Curve2D_r66ge")
 speed = 1.0
+
 [node name="Player2HUD" parent="." instance=ExtResource("5_dmpbk")]
 
 [node name="LevelEnd" parent="." instance=ExtResource("5_d31q8")]
