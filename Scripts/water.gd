@@ -41,6 +41,8 @@ func _push_body(body: Node, strength: float, delta: float) -> void:
 		body.velocity += push * delta
 
 func _draw():
+	
+	
 	var cs := $CollisionShape2D
 	if cs == null or cs.shape == null:
 		return
@@ -79,3 +81,11 @@ func _draw():
 		var dir := flow_dir.normalized()
 		var end := dir * 200.0
 		draw_line(Vector2.ZERO, end, Color.RED, 2.0)
+
+func melt():
+	is_iced = false
+	pass
+
+func iced():
+	is_iced = true
+	pass

@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://cbu4rj585njyo"]
+[gd_scene load_steps=30 format=3 uid="uid://w13rgsqqfpdq"]
 
-[ext_resource type="Script" uid="uid://cwyglcc1dn5n0" path="res://Scripts/player.gd" id="1_vgqql"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://cqddil01g4vdg" path="res://Assets/Sprites/GameStarCube/CubeGameStar.png" id="2_fkybt"]
 [ext_resource type="Texture2D" uid="uid://bm7cpka5yaj7r" path="res://Assets/Sprites/GameStarCube/characterIdle.png" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://i7fpxbkcii7o" path="res://Assets/Sprites/GameStarCube/characterWalk.png" id="4_3smsa"]

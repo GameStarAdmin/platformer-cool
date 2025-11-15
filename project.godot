@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PlatformerCool"
-run/main_scene="uid://bx8jht25bvaps"
+run/main_scene="uid://bsmavgp0d1g8e"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://Assets/Sprites/icon.svg"
 
@@ -25,6 +25,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="viewport"
+<<<<<<<HEADwindow/stretch/mode="canvas_items"
 
 [input]
 
