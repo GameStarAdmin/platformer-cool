@@ -7,6 +7,29 @@ signal green
 signal blue
 signal purple
 
+enum Seasons {SPRING, SUMMER, FALL, WINTER}
+
+var current_season: Seasons = Seasons.SPRING
+
+func change_season(season: Seasons) -> void:
+	if season == current_season:
+		return
+	match season:
+		Seasons.SPRING:
+			pass
+		Seasons.SUMMER:
+			pass
+		Seasons.FALL:
+			pass
+		Seasons.WINTER:
+			pass
+
+
+func reset_season_effects() -> void:
+	#unfreeze water
+	#remove wind
+	pass
+
 
 func hide_button(button_name: String):
 	$Buttons.find_child(button_name).visible = false
