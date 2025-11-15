@@ -38,7 +38,7 @@ func sprite_logic():
 	if velocity == Vector2.ZERO and is_on_floor():
 		animated_sprite.play("idle")
 	# Walk
-	elif velocity.x != 0 and is_on_floor():
+	elif velocity.x != 0:
 		animated_sprite.play("walk")
 	else:
 		animated_sprite.play("default")
