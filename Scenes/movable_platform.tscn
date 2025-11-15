@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ciqdesbnmum7p"]
 
-[ext_resource type="Script" uid="uid://bqijcp47iwg0o" path="res://Scripts/block.gd" id="1_ga8qe"]
+[ext_resource type="Script" uid="uid://bqijcp47iwg0o" path="res://Scripts/movable_platform.gd" id="1_ga8qe"]
 [ext_resource type="Texture2D" uid="uid://bk20c4sgxqp34" path="res://Assets/Sprites/PlatformV1.png" id="2_1kcfi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d31q8"]
@@ -72,6 +72,7 @@ patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 callback_mode_process = 0

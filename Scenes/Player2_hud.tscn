@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://du0o73op1m1gg"]
+[gd_scene load_steps=16 format=3 uid="uid://du0o73op1m1gg"]
 
 [ext_resource type="Texture2D" uid="uid://dg6vdrpaihgmd" path="res://Assets/Sprites/Buttons/RedButton.png" id="1_suhav"]
+[ext_resource type="Script" uid="uid://du25bv1rb6ghn" path="res://Scenes/player_2_hud.gd" id="1_vfr8x"]
 [ext_resource type="Texture2D" uid="uid://c5qo2dju8rhx8" path="res://Assets/Sprites/Buttons/RedPressed.png" id="2_41kjq"]
 [ext_resource type="Texture2D" uid="uid://d0eqrl2qkhp1x" path="res://Assets/Sprites/Buttons/FocusedButton.png" id="3_suhav"]
 [ext_resource type="Texture2D" uid="uid://c8jog72jsswfi" path="res://Assets/Sprites/Buttons/GreenButton.png" id="4_rp3gv"]
@@ -13,53 +14,54 @@
 [ext_resource type="Texture2D" uid="uid://c4h72t01gblu2" path="res://Assets/Sprites/Buttons/OrangePressed.png" id="11_506v8"]
 [ext_resource type="Texture2D" uid="uid://0cciwdpgi3k5" path="res://Assets/Sprites/Buttons/PurpleButton.png" id="12_vfr8x"]
 [ext_resource type="Texture2D" uid="uid://uro1mh8opu2k" path="res://Assets/Sprites/Buttons/PurplePressed.png" id="13_o1dv4"]
-[ext_resource type="Texture2D" uid="uid://dkahlygyyfbmw" path="res://Assets/Sprites/icon.svg" id="14_506v8"]
+[ext_resource type="Texture2D" uid="uid://cxohw3rn2yg6c" path="res://Assets/Sprites/winter_icon.png" id="15_vfr8x"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_vfr8x")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Buttons" type="HBoxContainer" parent="."]
 offset_top = 886.0
 offset_right = 1920.0
 offset_bottom = 1014.0
 theme_override_constants/separation = 128
 alignment = 1
 
-[node name="Red" type="TextureButton" parent="HBoxContainer"]
+[node name="Red" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture_normal = ExtResource("1_suhav")
 texture_pressed = ExtResource("2_41kjq")
 texture_focused = ExtResource("3_suhav")
 
-[node name="Orange" type="TextureButton" parent="HBoxContainer"]
+[node name="Orange" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture_normal = ExtResource("10_va0pv")
 texture_pressed = ExtResource("11_506v8")
 texture_focused = ExtResource("3_suhav")
 
-[node name="Yellow" type="TextureButton" parent="HBoxContainer"]
+[node name="Yellow" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture_normal = ExtResource("8_66lbc")
 texture_pressed = ExtResource("9_v4x8x")
 texture_focused = ExtResource("3_suhav")
 
-[node name="Green" type="TextureButton" parent="HBoxContainer"]
+[node name="Green" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture_normal = ExtResource("4_rp3gv")
 texture_pressed = ExtResource("5_62qa4")
 texture_focused = ExtResource("3_suhav")
 
-[node name="Blue" type="TextureButton" parent="HBoxContainer"]
+[node name="Blue" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture_normal = ExtResource("6_uw330")
 texture_pressed = ExtResource("7_ttjjl")
 texture_focused = ExtResource("3_suhav")
 
-[node name="Purple" type="TextureButton" parent="HBoxContainer"]
+[node name="Purple" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 texture_normal = ExtResource("12_vfr8x")
@@ -77,4 +79,11 @@ offset_left = -20.320004
 offset_top = -19.560001
 offset_right = 19.679996
 offset_bottom = 20.439999
-texture = ExtResource("14_506v8")
+texture = ExtResource("15_vfr8x")
+
+[connection signal="pressed" from="Buttons/Red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="Buttons/Orange" to="." method="_on_orange_pressed"]
+[connection signal="pressed" from="Buttons/Yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="Buttons/Green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="Buttons/Blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="Buttons/Purple" to="." method="_on_purple_pressed"]
