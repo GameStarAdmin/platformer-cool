@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -300.0
 const SCREEN_BORDERS : Vector2 = Vector2(1920, 850)
 var facing_right = true
 
+var wind_force: int = 0
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _process(_delta: float) -> void:
@@ -29,9 +31,9 @@ func _physics_process(delta: float) -> void:
 	horizontal_movement()
 	var direction := get_input_direction().x
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * SPEED + wind_force
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, SPEED) + wind_force
 	
 	move_and_slide()
 
@@ -62,3 +64,7 @@ func get_input_direction() -> Vector2:
 	if Input.is_action_pressed("move_left"):
 		dir.x -= 1
 	return dir.normalized()
+	
+func change_wind_force(force: int):
+	wind_force = force
+	

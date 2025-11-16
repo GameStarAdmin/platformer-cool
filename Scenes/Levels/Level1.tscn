@@ -16,7 +16,7 @@ point_count = 7
 
 [sub_resource type="Curve2D" id="Curve2D_r66ge"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 211, 966, 0, 0, 0, 0, -3, 976, -2.6620002, -58.564003, 2.6620002, 58.564003, -35, 1079, -9.7435875, -54.564095, 9.7435875, 54.564095, -6, 1228, -42.871788, -40.92307, 42.871788, 40.92307, 68, 1370, -57.099922, 2.2539444, 57.099922, -2.2539444, 232, 1440, -45.078884, 49.586773, 45.078884, -49.586773, 387, 1389, -2.2539444, 47.33283, 2.2539444, -47.33283, 429, 1206, 0, 0, 0, 0, 452, 994)
+"points": PackedVector2Array(0, 0, 0, 0, 211, 966, 29.262732, -45.37844, -29.262732, 45.37844, -3, 976, -2.6620002, -58.564003, 2.6620002, 58.564003, -35, 1079, -9.7435875, -54.564095, 9.7435875, 54.564095, -6, 1228, -42.871788, -40.92307, 42.871788, 40.92307, 68, 1370, -57.099922, 2.2539444, 57.099922, -2.2539444, 232, 1440, -45.078884, 49.586773, 45.078884, -49.586773, 387, 1389, -2.2539444, 47.33283, 2.2539444, -47.33283, 429, 1206, 0, 0, 0, 0, 452, 994)
 }
 point_count = 9
 
@@ -38,7 +38,7 @@ texture = ExtResource("1_4d3fe")
 position = Vector2(75, 622)
 
 [node name="LevelEnd" parent="." instance=ExtResource("3_8h4de")]
-position = Vector2(1825, 110)
+position = Vector2(1825, 120)
 
 [node name="Player2HUD" parent="." instance=ExtResource("4_jcebb")]
 
@@ -70,4 +70,6 @@ position = Vector2(155, 688)
 
 [connection signal="blue" from="Player2HUD" to="Platforms/Platform3" method="move"]
 [connection signal="green" from="Player2HUD" to="Platforms/Platform2" method="move"]
+[connection signal="new_season" from="Player2HUD" to="." method="change_background"]
 [connection signal="red" from="Player2HUD" to="Platforms/Platform1" method="move"]
+[connection signal="wind" from="Player2HUD" to="Player" method="change_wind_force"]
