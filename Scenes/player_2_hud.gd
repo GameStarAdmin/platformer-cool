@@ -1,4 +1,5 @@
 extends CanvasLayer
+class_name Player2
 
 signal red
 signal orange
@@ -7,28 +8,39 @@ signal green
 signal blue
 signal purple
 
+signal wind(force: int)
+signal new_season(season: Seasons)
+
 enum Seasons {SPRING, SUMMER, FALL, WINTER}
 
 var current_season: Seasons = Seasons.SPRING
 
+
+func _process(_delta):
+	if Input.is_action_just_pressed("spring_button"):
+		change_season(Seasons.SPRING)
+	elif Input.is_action_just_pressed("summer_button"):
+		change_season(Seasons.SUMMER)
+	elif Input.is_action_just_pressed("fall_button"):
+		change_season(Seasons.FALL)
+	elif Input.is_action_just_pressed("winter_button"):
+		change_season(Seasons.WINTER)
+
+
 func change_season(season: Seasons) -> void:
 	if season == current_season:
 		return
+	current_season = season
+	new_season.emit(season)
 	match season:
 		Seasons.SPRING:
-			pass
+			wind.emit(0)
 		Seasons.SUMMER:
-			pass
+			wind.emit(0)
 		Seasons.FALL:
-			pass
+			wind.emit(-50)
 		Seasons.WINTER:
-			pass
-
-
-func reset_season_effects() -> void:
-	#unfreeze water
-	#remove wind
-	pass
+			wind.emit(0)
 
 
 func hide_button(button_name: String):
@@ -56,3 +68,4 @@ func _on_blue_pressed():
 
 func _on_purple_pressed():
 	purple.emit()
+	
